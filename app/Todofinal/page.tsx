@@ -4,14 +4,15 @@ import React, { useState } from 'react'
 const Page = () => {
   const [title, setTitle] = useState("")
   const [desc, setDesc] = useState("")
-  const [toti, setToti] = useState([])
+  const [toti, setToti] = useState<{ title: string; desc: string }[]>([]);
 
-  const SubmitForm = (e) => {
-    e.preventDefault()
-    setToti([...toti, { title, desc }])
-    setTitle("")
-    setDesc("")
-  }
+  const SubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setToti([...toti, { title, desc }]);
+    setTitle("");
+    setDesc("");
+  };
+  
 
   let render = <h2>No Task Available</h2>
   if (toti.length > 0) {
