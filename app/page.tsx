@@ -73,7 +73,13 @@ export default function Header() {
     </header>
     <Carousel>
   <CarouselContent>
-    <CarouselItem>...</CarouselItem>
+    <CarouselItem>
+      <h2 className='text-blue-500'></h2>
+      <p className='text-green-400'></p>
+      <button className=''>
+
+      </button>
+    </CarouselItem>
     <CarouselItem>...</CarouselItem>
     <CarouselItem>...</CarouselItem>
   </CarouselContent>
